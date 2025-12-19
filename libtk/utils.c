@@ -1,6 +1,7 @@
 #include "lib9.h"
 #include "draw.h"
 #include "tk.h"
+typedef void* Pointer;
 
 struct TkCol
 {

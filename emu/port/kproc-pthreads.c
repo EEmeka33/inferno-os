@@ -11,6 +11,8 @@
 #include	<limits.h>
 #include	<errno.h>
 #include	<semaphore.h>
+#include <sched.h>
+#define pthread_yield() (sched_yield())
 
 #ifdef __NetBSD__
 #include	<sched.h>
@@ -240,3 +242,6 @@ oslopri(void)
 	param.sched_priority = sched_get_priority_min(policy);
 	pthread_setschedparam(self,  policy, &param);
 }
+
+void nofence(void) { }
+void (*coherence)(void) = nofence;

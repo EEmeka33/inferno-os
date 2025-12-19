@@ -19,7 +19,8 @@ CFLAGS=		-g\
 		-Wuninitialized -Wunused-variable -Wreturn-type -Wimplicit\
 		-I$ROOT/Linux/386/include\
 		-I$ROOT/include\
-		-DLINUX_386
+		-DLINUX_386\
+		-fcommon
 
 ANSICPP=
 LD=		cc -m32

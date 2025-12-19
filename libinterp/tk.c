@@ -10,6 +10,7 @@
 #include "keyboard.h"
 #include "raise.h"
 #include "kernel.h"
+typedef void* Pointer;
 
 extern	void	tkfreetop(Heap*, int);
 Type*	fakeTkTop;
